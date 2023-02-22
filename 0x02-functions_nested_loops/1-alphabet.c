@@ -1,14 +1,21 @@
 #include "main.h"
 
 /**
- * print alphabet- print alphabet in lowercase
+ * main - Prints Holberton as a message.
+ *
+ * Return: Always 0 (Success)
  */
-void print_alphabet(void);
+int main(void)
 {
-	char la;
+	int str[] = {95, 112, 117, 116, 99, 104, 97, 114};
+	int count, sz;
 
-	for (la = 'a'; la <= 'z'; la++)
-		_putchar(la);
-
+	sz = sizeof(str) / sizeof(int);
+	for (count = 0; count < sz; count++)
+	{
+		_putchar(str[count]);
+	}
 	_putchar('\n');
+	return (0);
 }
+
