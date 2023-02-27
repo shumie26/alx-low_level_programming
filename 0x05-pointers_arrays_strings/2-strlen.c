@@ -1,29 +1,20 @@
 #include "main.h"
 
 /**
- * _atoi - convert a string into an integer.
+ * _strlen - calculate the length of a string.
  *
- * @s: the string to use.
- *
- * Return: integer.
+ * @s: the string to calculate it's length.
+ * Return: length of a string.
  */
 
-int _atoi(char *s)
+int _strlen(char *s)
 {
-	int sign = 1, i = 0;
-	unsigned int res = 0;
+	int i;
+	int length = 0;
 
-	while (!(s[i] <= '9' && s[i] >= '0') && s[i] != '\0')
+	for (i = 0; s[i] != '\0'; i++)
 	{
-		if (s[i] == '-')
-			sign *= -1;
-		i++;
+		length++;
 	}
-	while (s[i] <= '9' && (s[i] >= '0' && s[i] != '\0'))
-	{
-		res = (res * 10) + (s[i] - '0');
-		i++;
-	}
-	res *= sign;
-	return (res);
+	return (length);
 }
